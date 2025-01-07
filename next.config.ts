@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  outoput: "export",
+  // basePath: "/sirun",
+  output: "export",
   reactStrictMode: false
 };
 

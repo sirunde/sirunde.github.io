@@ -42,7 +42,7 @@ const Nav = () => {
           </div>
           <div className="hidden md:flex md:gap-x-12 ">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:font-extrabold">
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900  hover:font-extrabold">
                 {item.name}
               </a>
             ))}
@@ -63,6 +63,9 @@ const Nav = () => {
                   className="h-8 w-auto"
                   src="/IzBRmk.jpg"
                   alt='Logo'
+                  width={32}
+                  height={32}
+                  quality={1}
                 />
               </a>
               <button

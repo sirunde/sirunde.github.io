@@ -2,7 +2,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -50,7 +49,6 @@ const formSchema = z.object({
 
 export default function ProfileForm({folders}) {
   // 1. Define your form.
-  console.log(folders)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -65,33 +63,29 @@ export default function ProfileForm({folders}) {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // This will be type-safe and validated.
+    console.log("test")
     console.log(values)
     const formData = new FormData();
     formData.append("imagefile", values.imagefile[0])
     formData.append("folder", values.folder)
     formData.append("filename", values.filename)
     formData.append("description", values.description)
-    const a = await fetch('/api/putimage', { method: 'POST', body: formData });
-    const repo = await a.json()
-    alert(repo.tes)
+    // const a = await fetch('/api/putimage', { method: 'POST', body: formData });
+    // const repo = await a.json()
+    alert("This is a test, it does not upload")
   }
 
-  const [files, setFile] = useState([]);
-  const [showlist,setList] = useState([]);
+  const [files, setFile] = useState();
+  const [showlist,setList] = useState();
   const onDrop = useCallback((acceptedFiles: File[]) => {
     // Do something with the files
-    console.log(acceptedFiles);
-    setList((prev) => [...prev, ...acceptedFiles]);
+    setList(acceptedFiles[0]);
     const listFiles = acceptedFiles.map(file => (URL.createObjectURL(file)));
-    setFile((prev)=> [...prev, ...listFiles]);
-    console.log(files);
+    setFile(listFiles[0]);
+    form.setValue('imagefile',acceptedFiles)
   }, [])
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
-  function handleChange(e) {
-    console.log(e.target.files);
-    setFile(URL.createObjectURL(e.target.files[0]));
-  }
   return (
     <div className=" mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <Form {...form}>
@@ -105,9 +99,9 @@ export default function ProfileForm({folders}) {
                 <FormControl>
                   <section className="container">
                   <div {...getRootProps({className: 'dropzone'})}>
-                    <input {...getInputProps()} />
+                    <input type='file' {...fileRef} {...getInputProps()} />
                     {
-                      <p>Drag and drop files here or {"click"}</p>
+                      <p>Drag and drop a file here or {"click"}</p>
                     }
                     </div>
                   {/* <Input type="file" {...fileRef} onChange={handleChange} /> */}
@@ -120,10 +114,7 @@ export default function ProfileForm({folders}) {
               </FormItem>
             )}
           />
-          {files && 
-            showlist.map(file => (
-              <li key={file.id}>{file.name}</li>
-            ))
+          {files && <li>{showlist.name}</li>
           }
           {/* <FolderSearch form = {form}/> */}
           <FormField control={form.control} name="folder" render={({ field }) => (
@@ -132,7 +123,7 @@ export default function ProfileForm({folders}) {
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Theme" />
+                    <SelectValue placeholder={"test"} />
                   </SelectTrigger>
                   <SelectContent>
                     {folders.contents.map((foldering, index) => (
