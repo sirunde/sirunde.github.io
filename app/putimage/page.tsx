@@ -19,8 +19,8 @@ import ImageForm from "@/app/putimage/form"
 import FolderSearch from "@/app/putimage/foldersearch"
 
 
-export default async function ProfileForm() {
-  const folderslist = await FolderSearch();
+export default function ProfileForm() {
+  const folderslist = FolderSearch();
   console.log(folderslist)
   return (
     <div className=" mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
