@@ -6,11 +6,12 @@ import { DialogPanel } from '@headlessui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+const basePath = process.env.basepath;
+
 const navigation = [
-  { name: 'TYPING', href: '/typing' },
-  { name: 'FILE UPLOADER', href: '/' },
-  {name: 'CHAT', href: '/chat'},
-  // { name: 'Necklace', href: '#' },
+  { name: 'TYPING', href: `${basePath}/typing`},
+  { name: 'FILE UPLOADER', href: `${basePath}/`},
+  {name: 'CHAT', href: `${basePath}/chat`},
 ]
 
 const Nav = () => {
@@ -21,11 +22,11 @@ const Nav = () => {
       <header>
         <nav className="flex items-center justify-between p-2 md:px-8" aria-label="Global">
           <div className="flex md:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link href={`${basePath}/`} className="-m-1.5 p-1.5">
               <span className="sr-only">Sirunde</span>
               <img
                 className="h-8 w-auto"
-                src="/IzBRmk.jpg"
+                src={`${basePath}/IzBRmk.jpg`}
                 alt=""
               />
             </Link>
@@ -43,13 +44,13 @@ const Nav = () => {
           </div>
           <div className="hidden md:flex md:gap-x-12 ">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900  hover:font-extrabold">
+              <a key={item.name} href={`${item.href}`} className="text-sm font-semibold leading-6 text-gray-900  hover:font-extrabold">
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden md:flex md:flex-1 md:justify-end">
-            <a href="login" className="text-sm font-semibold leading-6 text-gray-900">
+            <a href={`${basePath}/login`} className="text-sm font-semibold leading-6 text-gray-900">
               Login <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -58,11 +59,11 @@ const Nav = () => {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
+              <Link href={`${basePath}/`} className="-m-1.5 p-1.5">
                 <span className="sr-only">Main Logo</span>
                 <Image
                   className="h-8 w-auto"
-                  src="/IzBRmk.jpg"
+                  src={`${basePath}/IzBRmk.jpg`}
                   alt='Logo'
                   width={32}
                   height={32}
@@ -93,7 +94,7 @@ const Nav = () => {
                 </div>
                 <div className="py-6">
                   <a
-                    href="/login"
+                    href={`${basePath}/login`}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Login
