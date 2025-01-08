@@ -6,7 +6,7 @@ import { DialogPanel } from '@headlessui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-const basePath = process.env.basepath;
+const basePath = process.env.BASEPATH;
 
 const navigation = [
   { name: 'TYPING', href: `${basePath}/typing`},
