@@ -7,9 +7,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
-  { name: 'TYPING', href: '#' },
-  { name: 'FILE UPLOADER', href: '#' },
-  {name: 'CHAT', href: '#'},
+  { name: 'TYPING', href: '/typing' },
+  { name: 'FILE UPLOADER', href: '/' },
+  {name: 'CHAT', href: '/chat'},
   // { name: 'Necklace', href: '#' },
 ]
 
