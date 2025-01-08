@@ -47,7 +47,7 @@ const formSchema = z.object({
   })
 })
 
-export default function ProfileForm({folders}) {
+export default function ProfileForm({folders}: { folders: { contents: { label: string }[] } }) {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -75,8 +75,9 @@ export default function ProfileForm({folders}) {
     alert("This is a test, it does not upload")
   }
 
-  const [files, setFile] = useState();
-  const [showlist,setList] = useState();
+  const [urls, setFile] = useState<string|null>(null);
+  const [files,setList] = useState<File|null>(null);
+
   const onDrop = useCallback((acceptedFiles: File[]) => {
     // Do something with the files
     setList(acceptedFiles[0]);
@@ -114,7 +115,7 @@ export default function ProfileForm({folders}) {
               </FormItem>
             )}
           />
-          {files && <li>{showlist.name}</li>
+          {urls && <li>{files?.name}</li>
           }
           {/* <FolderSearch form = {form}/> */}
           <FormField control={form.control} name="folder" render={({ field }) => (

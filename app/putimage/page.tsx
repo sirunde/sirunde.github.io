@@ -22,11 +22,9 @@ import FolderSearch from "@/app/putimage/foldersearch"
 export default async function ProfileForm() {
   const folderslist = await FolderSearch();
   console.log(folderslist)
-  const folders = await folderslist.json()
-  console.log(folders)
   return (
     <div className=" mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <ImageForm folders={folders}/>
+        <ImageForm folders={folderslist}/>
   </div>
   )
 }
