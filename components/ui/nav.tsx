@@ -31,6 +31,7 @@ const Nav = () => {
               />
             </Link>
           </div>
+
           <div className="flex md:hidden">
             <button
               type="button"
@@ -42,6 +43,7 @@ const Nav = () => {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
+
           <div className="hidden md:flex md:gap-x-12 ">
             {navigation.map((item) => (
               <a key={item.name} href={`${item.href}`} className="text-sm font-semibold leading-6 text-gray-900  hover:font-extrabold">
@@ -49,12 +51,15 @@ const Nav = () => {
               </a>
             ))}
           </div>
+
           <div className="hidden md:flex md:flex-1 md:justify-end">
             <a href={`${basePath}/login`} className="text-sm font-semibold leading-6 text-gray-900">
               Login <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
+
         </nav>
+        
         <Dialog as="div" className="sm:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
