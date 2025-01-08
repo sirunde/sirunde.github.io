@@ -22,7 +22,7 @@ const Nav = () => {
       <header>
         <nav className="flex items-center justify-between p-2 md:px-8" aria-label="Global">
           <div className="flex md:flex-1">
-            <Link href={`${basePath}/`} className="-m-1.5 p-1.5">
+            <Link href={`${basePath}`} className="-m-1.5 p-1.5">
               <span className="sr-only">Sirunde</span>
               <img
                 className="h-8 w-auto"
@@ -85,7 +85,7 @@ const Nav = () => {
                   {navigation.map((item) => (
                     <a
                       key={item.name}
-                      href={item.href}
+                      href={`${item.href}`}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
