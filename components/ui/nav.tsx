@@ -6,7 +6,7 @@ import { DialogPanel } from '@headlessui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-const basePath = process.env.BASEPATH;
+const basePath = process.env.NEXT_PUBLIC_BASEPATH;
 
 const navigation = [
   { name: 'TYPING', href: `${basePath}/typing`},
@@ -59,20 +59,17 @@ const Nav = () => {
           </div>
 
         </nav>
-        
+
         <Dialog as="div" className="sm:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <Link href={`${basePath}/`} className="-m-1.5 p-1.5">
+              <Link href={`${basePath}`} className="-m-1.5 p-1.5">
                 <span className="sr-only">Main Logo</span>
-                <Image
+                <img
                   className="h-8 w-auto"
                   src={`${basePath}/IzBRmk.jpg`}
                   alt='Logo'
-                  width={32}
-                  height={32}
-                  quality={1}
                 />
               </Link>
               <button
