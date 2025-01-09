@@ -46,7 +46,7 @@ const Nav = () => {
 
           <div className="hidden md:flex md:gap-x-12 ">
             {navigation.map((item) => (
-              <a key={item.name} href={`${item.href}`} className="text-sm font-semibold leading-6 text-gray-900  hover:font-extrabold">
+              <a key={item.name} href={`${item.href}`} className="text-sm font-semibold leading-6 text-gray-900  hover:ease-in hover:duration-75  hover:text-base">
                 {item.name}
               </a>
             ))}
@@ -60,7 +60,7 @@ const Nav = () => {
 
         </nav>
 
-        <Dialog as="div" className="sm:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog as="div" className="md:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
