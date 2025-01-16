@@ -36,7 +36,7 @@ export default function CardWithForm() {
     fetchData();
   }, []); // Empty dependency array means this runs once after the first render
 
-  const sendtoServer = async (message,timeNow) => {
+  const sendtoServer = async (message:string,timeNow:string) => {
     try {
       const response = await fetch('https://4dqmu7fn6wa2pdf3irlyorc4y40lzikh.lambda-url.us-east-1.on.aws/', {
         method: "POST",
