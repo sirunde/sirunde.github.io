@@ -42,7 +42,9 @@ export default function CardWithForm() {
         method: "POST",
         body: JSON.stringify({id:id ,time: timeNow , message:message }), 
       });
-      console.log('Lambda response:', response.data);
+      if (response.ok){
+        console.log("successfully uploaded");
+      }
     } catch (error) {
       console.error('Error sending message to Lambda:', error);
     }
