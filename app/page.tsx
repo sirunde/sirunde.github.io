@@ -8,6 +8,19 @@ export default function Home() {
     <main>
       <div>
       <ImageForm folders={folderslist}/>
+      {/* <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li> */}
+
       </div>
     </main>
   );
