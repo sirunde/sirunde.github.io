@@ -50,8 +50,9 @@ export default function CardWithForm() {
     }
   };
 
-  const sendMessage = async (e) => {
+  const sendMessage = async (e:SubmitEvent) => {
     e.preventDefault();
+    console.log(e)
     const currentTime = Date.now().toString();
     if (newMessage.trim()) {
       setMsgs((prevMsgs) => [
