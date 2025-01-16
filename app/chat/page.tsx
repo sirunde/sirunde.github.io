@@ -10,12 +10,11 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { useState,useEffect } from "react"
 export default function CardWithForm() {
   const [newMessage, setNewMessage] = useState("");
-  const [msgs, setMsgs] = useState([]);
+  const [msgs, setMsgs] = useState<Message[]>([]);
   const [loading, setLoading] = useState(true);
   const [id,setId] = useState("user")
   // Fetch data from the API
@@ -49,13 +48,17 @@ export default function CardWithForm() {
       console.error('Error sending message to Lambda:', error);
     }
   };
-
-  const sendMessage = async (e:SubmitEvent) => {
+  type Message = {
+    role: string; // e.g., 'you' or another role
+    time: string; // the current time, likely in a specific string format
+    message: string; // the actual message text
+  };
+  const sendMessage = async (e:React.FormEvent) => {
     e.preventDefault();
     console.log(e)
     const currentTime = Date.now().toString();
     if (newMessage.trim()) {
-      setMsgs((prevMsgs) => [
+      setMsgs((prevMsgs:Message[]) => [
         ...prevMsgs,
         { role: 'you', time:currentTime, message: newMessage},
       ]
