@@ -10,7 +10,7 @@ const basePath = process.env.NEXT_PUBLIC_BASEPATH;
 
 const navigation = [
   { name: 'TYPING', href: `${basePath}/typing`},
-  { name: 'FILE UPLOADER', href: `${basePath}/`},
+  { name: 'FILE UPLOADER', href: `${basePath}/file`},
   {name: 'CHAT', href: `${basePath}/chat`},
 ]
 
