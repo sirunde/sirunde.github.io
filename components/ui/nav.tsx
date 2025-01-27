@@ -6,12 +6,11 @@ import { DialogPanel } from '@headlessui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-const basePath = process.env.NEXT_PUBLIC_BASEPATH;
 
 const navigation = [
-  { name: 'TYPING', href: `${basePath}/typing`},
-  { name: 'FILE UPLOADER', href: `${basePath}/file`},
-  {name: 'CHAT', href: `${basePath}/chat`},
+  { name: 'PROJECTS', href: `/projects`},
+  { name: 'FILE UPLOADER', href: `/file`},
+  {name: 'CHAT', href: `/chat`},
 ]
 
 const Nav = () => {
@@ -26,7 +25,7 @@ const Nav = () => {
               <span className="sr-only">Sirunde</span>
               <img
                 className="h-8 w-auto"
-                src={`${basePath}/IzBRmk.jpg`}
+                src={`/IzBRmk.jpg`}
                 alt=""
               />
             </Link>
@@ -53,7 +52,7 @@ const Nav = () => {
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-end">
-            <a href={`${basePath}/login`} className="text-sm font-semibold leading-6 text-gray-900">
+            <a href={`/login`} className="text-sm font-semibold leading-6 text-gray-900">
               Login <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -68,7 +67,7 @@ const Nav = () => {
                 <span className="sr-only">Main Logo</span>
                 <img
                   className="h-8 w-auto"
-                  src={`${basePath}/IzBRmk.jpg`}
+                  src={`/IzBRmk.jpg`}
                   alt='Logo'
                 />
               </Link>
@@ -96,7 +95,7 @@ const Nav = () => {
                 </div>
                 <div className="py-6">
                   <a
-                    href={`${basePath}/login`}
+                    href={`/login`}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Login
