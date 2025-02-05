@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="sticky w-full inset-x-0 top-0 z-10 bg-white"> <Nav/> </div>
-        {children}
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">{children}</div>
       </body>
     </html>
   );

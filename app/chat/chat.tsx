@@ -69,7 +69,7 @@ export default function CardWithForm() {
     }
   };
   return (
-<div className="flex flex-row justify-center min-h-10 px-4 py-8 sm:px-6">
+<div className="flex flex-row justify-center min-h-10 px-4 sm:px-6">
 <Card className="h-[65vh] w-[25vw] max-w-[70vw] min-h-[500px] min-w-[300px] flex flex-col">
   <CardHeader>
     <CardTitle>Chat</CardTitle>
