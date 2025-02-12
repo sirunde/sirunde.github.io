@@ -11,6 +11,7 @@ const navigation = [
   { name: 'PROJECTS', href: `/projects`},
   { name: 'FILE UPLOADER', href: `/file`},
   {name: 'CHAT', href: `/chat`},
+  {name: 'GITHUB', href: 'https://github.com/sirunde/'}
 ]
 
 const Nav = () => {

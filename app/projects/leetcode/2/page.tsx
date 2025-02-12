@@ -13,7 +13,7 @@ import remarkParse from "remark-parse";
 import rehypeDocument from "rehype-document"
 import rehypeFormat from 'rehype-format'
 export default async function Post() {
-  const postsDirectory = join(process.cwd(), "posts/leetcode");
+  const postsDirectory = join(process.cwd(), "/blog/posts/leetcode");
   console.log(postsDirectory);
   const fileContents = fs.readFileSync(join(postsDirectory, "2.md"), "utf-8");
   const { data, content } = matter(fileContents);

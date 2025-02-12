@@ -22,7 +22,7 @@ import rehypeFormat from 'rehype-format'
 export default async function Post() {
   const postsDirectory = join(process.cwd(), "/blog/posts/leetcode");
   console.log(postsDirectory);
-  const fileContents = fs.readFileSync(join(postsDirectory, "1.md"), "utf-8");
+  const fileContents = fs.readFileSync(join(postsDirectory, "3.md"), "utf-8");
   const { data, content } = matter(fileContents);
   
   const processedContent = await unified()
