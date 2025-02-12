@@ -1,5 +1,11 @@
 import Link from "next/link";
 import CoverImage from "@/components/cover-image";
+type Post = {
+  title:string,
+  coverImage:string,
+  slug:string,
+  excerpt:string,
+  };
 
 function PostPreview({
   title,
@@ -27,7 +33,7 @@ function PostPreview({
   );
 }
 
-export default function MoreStories({ morePosts }: { morePosts: any[] }) {
+export default function MoreStories({ morePosts }: { morePosts: Post[] }) {
   return (
     
     <section>
