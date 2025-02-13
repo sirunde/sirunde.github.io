@@ -31,7 +31,7 @@ const morePosts = [{
   excerpt: "File uploading form. Used it to upload file on AWS S3",
   },
   {
-  title: "PROJECTS",
+  title: "CHAT",
   coverImage: "/assets/home/chatCover.png",
   slug: "/chat",
   excerpt: "Can chat with other. Data is stored in AWS dynamoDB."},
