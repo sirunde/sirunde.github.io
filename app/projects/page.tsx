@@ -152,7 +152,7 @@ export default function Projects() {
         <div className="text-center bg-white rounded-2xl p-12 shadow-lg">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Interested in Collaboration?</h2>
           <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

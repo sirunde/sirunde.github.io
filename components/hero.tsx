@@ -16,7 +16,7 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-6">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Sirunde
             </span>

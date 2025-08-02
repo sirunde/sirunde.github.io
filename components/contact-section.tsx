@@ -7,9 +7,9 @@ export function ContactSection() {
   return (
     <section className="py-20 bg-white" id="contacts">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Let's Work Together</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Let&apos;s Work Together</h2>
         <p className="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
-          I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to
+          I&apos;m always interested in new opportunities and exciting projects. Feel free to reach out if you&apos;d like to
           collaborate or just say hello!
         </p>
 
