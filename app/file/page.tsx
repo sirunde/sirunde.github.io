@@ -25,6 +25,6 @@ export default function ProfileForm() {
   return (
     <div>
         <ImageForm folders={folderslist}/>
-  </div>
+    </div>
   )
 }

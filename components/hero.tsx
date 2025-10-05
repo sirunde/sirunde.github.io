@@ -56,12 +56,12 @@ export function Hero() {
 
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-slate-900 mb-2">10+</div>
+              <div className="text-3xl font-bold text-slate-900 mb-2">7+</div>
               <div className="text-slate-600">Projects Completed</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-slate-900 mb-2">3+</div>
-              <div className="text-slate-600">Years Experience</div>
+              <div className="text-slate-600">Years Coding Experience</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-slate-900 mb-2">100+</div>

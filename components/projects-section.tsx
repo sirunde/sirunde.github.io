@@ -9,7 +9,7 @@ const projects = [
     description:
       "A premium rental platform offering high-end cars, villas, and yachts in Los Angeles and Miami. Designed for those seeking a seamless luxury experience.",
     icon: Car,
-    href: "https://joinvillion.com",
+    href: "https://villionyachts.com",
     tags: ["Next.js", "Supabase", "Usaepay", "Vercel"],
     color: "from-teal-500 to-green-500",
     status: "Regular Updates",
