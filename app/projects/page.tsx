@@ -9,8 +9,18 @@ const allProjects = [
     description:
       "A premium rental platform offering high-end cars, villas, and yachts in Los Angeles and Miami. Designed for those seeking a seamless luxury experience.",
     icon: FileText,
-    href: "https://joinvillion.com",
-    tags: ["Next.js", "Supabase", "Usaepay", "Vercel"],
+    href: "https://villionyachts.com",
+    tags: ["Next.js", "Supabase", "stripe", "Vercel"],
+    color: "from-teal-500 to-green-500",
+    status: "Regular Updates",
+  },
+  {
+    title: "One Billion Row Challenge",
+    description:
+      "The One Billion Row Challenge (1BRC) is a fun exploration of how far can be pushed for aggregating one billion rows from a text file. Grab all your (virtual) threads, optimize your GC, or pull any other trick, and create the fastest implementation for solving this task!",
+    icon: FileText,
+    href: "https://github.com/sirunde/one-billion-row-challenge",
+    tags: ["c++"],
     color: "from-teal-500 to-green-500",
     status: "Regular Updates",
   },
@@ -32,7 +42,7 @@ const allProjects = [
     href: "/projects/leetcode",
     tags: ["Algorithms", "Data Structures", "C++", "Python", "Problem Solving"],
     color: "from-blue-500 to-cyan-500",
-    status: "67+ Solved",
+    status: "100+ Solved",
   },
   {
     title: "AWS S3 File Uploader",
@@ -49,7 +59,7 @@ const allProjects = [
     description:
       "Machine learning projects using PyTorch for computer vision tasks. Includes image classification, object detection, and OCR systems with detailed implementation and analysis.",
     icon: Brain,
-    href: "/projects/lc",
+    href: "https://github.com/sirunde/ocr",
     tags: ["PyTorch", "Computer Vision", "Deep Learning", "OCR", "Image Processing"],
     color: "from-orange-500 to-red-500",
     status: "Research Project",
@@ -149,11 +159,6 @@ export default function Projects() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-white rounded-2xl p-12 shadow-lg">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Interested in Collaboration?</h2>
-          <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
-            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
@@ -164,11 +169,7 @@ export default function Projects() {
                 View GitHub Profile
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/chat">Try Chat Application</Link>
-            </Button>
           </div>
-        </div>
       </div>
     </main>
   )
